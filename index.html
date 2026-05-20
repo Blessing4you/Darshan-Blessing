@@ -390,7 +390,7 @@
                 </div>
 
                 <a id="modal-upi-link" href="#" class="gpay-btn">
-                     Open Google Pay / Mobile UPI App
+                     Contribute to Website Hosting & Maintainance
                 </a>
                 <button class="close-btn" onclick="closeDarshan()">Return to Sanctuary</button>
             </div>
@@ -398,12 +398,12 @@
     </div>
 
     <footer>
-        <p>© 2026 Indian Digital Sanctuary. Designed for unified spiritual contemplation and peace.</p>
+        <p>Â© 2026 Indian Digital Sanctuary. Designed for unified spiritual contemplation and peace.</p>
     </footer>
 
     <script>
         const YOUR_GPAY_UPI_ID = "ssimononline-1@okhdfcbank"; 
-        const TEMPLE_TRUST_NAME = "Sacred Darshan Trust";
+        const TEMPLE_TRUST_NAME = "Free Sacred Darshan";
 
         const sanctuaries = [
             {
@@ -512,7 +512,7 @@
                 document.getElementById('modal-blessing').innerText = data.blessing;
                 
                 const EncodedOrg = encodeURIComponent(TEMPLE_TRUST_NAME);
-                const EncodedNote = encodeURIComponent(`Devotional Dakshina for ${data.name}`);
+                const EncodedNote = encodeURIComponent(`Hosting and Maintainance Support`);
                 const upiUrl = `upi://pay?pa=${YOUR_GPAY_UPI_ID}&pn=${EncodedOrg}&tn=${EncodedNote}&cu=INR`;
                 
                 document.getElementById('modal-upi-link').href = upiUrl;
