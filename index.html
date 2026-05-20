@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarva Dharma Darshan - Spiritual Blessings & Dakshina</title>
+    <title>Sarva Dharma Darshan - Spiritual Contemplation Gallery</title>
     <style>
         :root {
             --saffron-dark: #CC5A01;
@@ -266,7 +266,7 @@
             background: linear-gradient(135deg, #FF6F00, #E65100);
             color: white;
             border: 2px solid var(--gold);
-            padding: 0.9rem;
+            padding: 1rem;
             border-radius: 8px;
             font-size: 1.05rem;
             font-weight: bold;
@@ -285,7 +285,6 @@
             box-shadow: 0 6px 25px rgba(255, 111, 0, 0.7);
         }
 
-        /* NEW VISIBLE UPI ID BADGE DISPLAY STYLES */
         .upi-display-box {
             background: rgba(255, 255, 255, 0.08);
             border: 1px dashed rgba(255, 215, 0, 0.4);
@@ -348,12 +347,23 @@
 
         footer {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             font-size: 0.95rem;
             color: #5D1F00;
             background-color: #FFE0B2;
             border-top: 2px solid var(--saffron-light);
-            font-weight: bold;
+        }
+        
+        .legal-disclaimer {
+            font-size: 0.8rem; 
+            font-weight: normal; 
+            opacity: 0.85; 
+            max-width: 700px; 
+            margin: 1.5rem auto 0 auto; 
+            line-height: 1.5;
+            text-align: justify;
+            border-top: 1px solid rgba(93, 31, 0, 0.2);
+            padding-top: 1rem;
         }
     </style>
 </head>
@@ -361,7 +371,7 @@
 
     <header>
         <h1>Sacred Indian Darshan Portal</h1>
-        <p>Touch any divine image to reveal the blessing light and tender your offering</p>
+        <p>A digital gallery for unified spiritual contemplation and cultural appreciation.</p>
     </header>
 
     <div class="container">
@@ -373,37 +383,39 @@
     <div class="modal" id="darshan-modal" onclick="closeDarshan()">
         <div class="darshan-container" onclick="event.stopPropagation()">
             <div class="darshan-frame">
-                <img id="modal-img" src="" alt="Sacred Idol">
+                <img id="modal-img" src="" alt="Sacred Image">
             </div>
             <h2 id="modal-name" style="color: var(--gold); font-size: 1.7rem;"></h2>
             <p class="sacred-phrase" id="modal-scripture"></p>
             <p class="blessing-text" id="modal-blessing"></p>
             
             <div class="action-layout">
-                <!-- NEW VISIBLE UPI PANEL CONTAINER -->
                 <div class="upi-display-box">
                     <div style="text-align: left;">
-                        <div class="upi-text-label">UPI ID / GPay Address:</div>
+                        <div class="upi-text-label">Developer UPI ID:</div>
                         <div class="upi-address-string" id="visible-upi-string">ssimononline-1@okhdfcbank</div>
                     </div>
                     <button class="copy-badge-btn" id="copy-action-button" onclick="copyUpiToClipboard()">Copy ID</button>
                 </div>
 
                 <a id="modal-upi-link" href="#" class="gpay-btn">
-                     Contribute to Website Hosting & Maintainance
+                     Contribute to Website Hosting & Maintenance
                 </a>
-                <button class="close-btn" onclick="closeDarshan()">Return to Sanctuary</button>
+                <button class="close-btn" onclick="closeDarshan()">Return to Gallery</button>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 Indian Digital Sanctuary. Designed for unified spiritual contemplation and peace.</p>
+        <p style="font-weight: bold;">© 2026 Indian Digital Sanctuary. Designed for peaceful cultural reflection.</p>
+        <p class="legal-disclaimer">
+            <strong>Disclaimer & Transparency Note:</strong> This website is an independent, non-commercial digital art portfolio and cultural exhibition project. It is not affiliated with, managed by, authorized by, or collecting official religious donations on behalf of any official religious board, temple trust, mosque committee, church diocese, or community foundation. All optional financial contributions made via the UPI mechanism are entirely voluntary and go directly to the independent creator to support domain renewal, system maintenance, and website hosting infrastructure costs.
+        </p>
     </footer>
 
     <script>
         const YOUR_GPAY_UPI_ID = "ssimononline-1@okhdfcbank"; 
-        const TEMPLE_TRUST_NAME = "Free Sacred Darshan";
+        const PROJECT_RECOGNITION = "Moments Web Maintenance";
 
         const sanctuaries = [
             {
@@ -411,42 +423,42 @@
                 tag: "Universal Cosmic Assembly",
                 imgUrl: "https://image.pollinations.ai/prompt/A%20highly%20detailed%20and%20realistic%20traditional%20Indian%20temple%20sanctum%20sanctorum%20with%20a%20divine%20assembly%20of%20famous%20deities%20including%20Lord%20Ganesha,%20Lord%20Shiva,%20Maa%20Durga,%20and%20Lord%20Krishna.%20The%20idols%20are%20adorned%20in%20exquisite%20silk%20vastras,%20intricate%20gold%20jewelry,%20and%20vibrant%20garlands%20of%20fresh%20marigold%20and%20jasmine%20flowers.%20Warm,%20sacred%20glow%20from%20burning%20brass%20oil%20lamps%20\(diyas\)%20and%20gentle%20wisps%20of%20incense%20smoke%20create%20a%20blessed,%20peaceful,%20and%20authentic%20Darshan%20atmosphere.?width=800&height=1000&nologo=true",
                 scripture: "Om Asato Ma Sadgamaya",
-                blessing: "May supreme spiritual alignment, continuous prosperity, radiant health, and unwavering mental peace be granted to you and your family."
+                blessing: "May supreme cosmic alignment, radiant health, absolute mental clarity, and protective peace be with you and your household."
             },
             {
                 name: "Islam",
                 tag: "Hazratbal & Sufi Holy Shrines",
                 imgUrl: "https://image.pollinations.ai/prompt/A%20breathtaking,%20highly%20realistic%20interior%20of%20a%20historic%20Indian%20mosque%20shrine,%20showcasing%20exquisite%20marble%20carvings,%20elegant%20warm%20hanging%20glass%20lamps,%20and%20an%20atmosphere%20of%20profound%20serenity.%20Soft%20morning%20sunlight%20streams%20through%20intricate%20geometric%20jali%20windows,%20illuminating%20peaceful%20prayer%20mats.?width=800&height=1000&nologo=true",
                 scripture: "Bismillah ir-Rahman ir-Rahim",
-                blessing: "May the Ultimate Protector shower your household with absolute divine mercy, endless health, graceful tranquility, and boundless guidance."
+                blessing: "May continuous mercy, deep inner tranquility, graceful guidance, and sound protection accompany you through life's journey."
             },
             {
                 name: "Christianity",
                 tag: "Basilica of Our Lady of Good Health",
                 imgUrl: "https://image.pollinations.ai/prompt/A%20magnificent,%20highly%20realistic%20altar%20of%20an%20Indian%20basilica%20cathedral,%20featuring%20a%20beautifully%20adorned%20statue%20of%20Mother%20Mary%20holding%20baby%20Jesus,%20dressed%20in%20traditional%20fine%20silk%20garments.%20Soft%20altar%20candles%20glow%20warmly%20amidst%20fresh%20white%20lilies,%20casting%20a%20heavenly,%20peaceful%20blessing%20light.?width=800&height=1000&nologo=true",
                 scripture: "The Lord is My Shepherd",
-                blessing: "May unconditional divine grace, miraculous healing, supreme comfort, and protective love shield you from all life tribulations."
+                blessing: "May unconditional grace, complete comfort, physical healing, and protective strength shield you from all difficulties."
             },
             {
                 name: "Sikhism",
                 tag: "Sri Harmandir Sahib (Golden Temple)",
                 imgUrl: "https://image.pollinations.ai/prompt/A%20profoundly%20accurate%20and%20highly%20detailed%20interior%20view%20of%20a%20sacred%20Gurdwara,%20focused%20reverently%20on%20the%20Sri%20Guru%20Granth%20Sahib%20seated%20magnificently%20under%20a%20royal%20gilded%20canopy%20\(Palki%20Sahib\).%20Exquisite%20flower%20decorations,%20glowing%20chandeliers,%20and%20deeply%20peaceful%20devotional%20energy.?width=800&height=1000&nologo=true",
                 scripture: "Ek Onkar Satnam",
-                blessing: "Receive the timeless blessings of immense inner strength, absolute humility, righteous courage, and communal prosperity."
+                blessing: "Receive the timeless blessings of profound inner resilience, absolute humility, and righteous communal prosperity."
             },
             {
                 name: "Buddhism",
                 tag: "Mahabodhi Mahavihara Santam",
                 imgUrl: "https://image.pollinations.ai/prompt/A%20serene%20and%20highly%20realistic%20golden%20statue%20of%20Lord%20Buddha%20in%20deep%20meditative%20Dhyana%20mudra%20inside%20an%20ancient%20Indian%20monastery%20shrine.%20Soft%20glow%20from%20brass%20lamps%20illuminates%20marigold%20petals,%20with%20gentle%20wisps%20of%20incense%20creating%20complete%20mindful%20calm.?width=800&height=1000&nologo=true",
                 scripture: "Buddham Sharanam Gacchami",
-                blessing: "May your mind achieve absolute liberation from stress, complete clarity of thought, perfect balance, and pure compassion."
+                blessing: "May your mind attain absolute release from stress, flawless mindfulness, balance, and boundless compassion."
             },
             {
                 name: "Jainism",
                 tag: "Shree Dilwara Tirthankar",
                 imgUrl: "https://image.pollinations.ai/prompt/An%20exquisite,%20highly%20realistic%20white%20marble%20idol%20of%20a%20revered%20Jain%20Tirthankara%20seated%20in%20deep%20padmasana%20posture%20inside%20a%20magnificently%20carved%20marble%20temple.%20The%20atmosphere%20is%20immaculately%20clean,%20pure,%20peaceful,%20reflecting%20absolute%20non-violence%20and%20spiritual%20triumph.?width=800&height=1000&nologo=true",
                 scripture: "Ahinsa Paramo Dharma",
-                blessing: "Blessed with deep self-discipline, inner purity, non-violence across all your actions, and total liberation from negative karma."
+                blessing: "Blessed with complete self-discipline, spiritual clarity, and total inner liberation from all negative karmic influences."
             }
         ];
 
@@ -456,13 +468,10 @@
                 const ctx = new AudioContext();
                 const osc1 = ctx.createOscillator();
                 const gain1 = ctx.createGain();
-                osc1.type = 'sine';
-                osc1.frequency.setValueAtTime(659.25, ctx.currentTime);
-                
+                osc1.type = 'sine'; osc1.frequency.setValueAtTime(659.25, ctx.currentTime);
                 const osc2 = ctx.createOscillator();
                 const gain2 = ctx.createGain();
-                osc2.type = 'sine';
-                osc2.frequency.setValueAtTime(329.63, ctx.currentTime);
+                osc2.type = 'sine'; osc2.frequency.setValueAtTime(329.63, ctx.currentTime);
 
                 gain1.gain.setValueAtTime(0.6, ctx.currentTime);
                 gain1.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 3.0);
@@ -473,7 +482,7 @@
                 osc2.connect(gain2); gain2.connect(ctx.destination);
                 osc1.start(); osc2.start();
                 osc1.stop(ctx.currentTime + 3.0); osc2.stop(ctx.currentTime + 2.5);
-            } catch (e) { console.log("Audio ready."); }
+            } catch (e) { console.log("Audio complete."); }
         }
 
         const grid = document.getElementById('faith-grid');
@@ -483,7 +492,7 @@
             card.innerHTML = `
                 <div class="image-container">
                     <img src="${shrine.imgUrl}" alt="${shrine.name}">
-                    <div class="click-overlay"><span>Receive Blessing</span></div>
+                    <div class="click-overlay"><span>View Gallery</span></div>
                 </div>
                 <div class="info">
                     <h2>${shrine.name}</h2>
@@ -511,13 +520,12 @@
                 document.getElementById('modal-scripture').innerText = data.scripture;
                 document.getElementById('modal-blessing').innerText = data.blessing;
                 
-                const EncodedOrg = encodeURIComponent(TEMPLE_TRUST_NAME);
-                const EncodedNote = encodeURIComponent(`Hosting and Maintainance Support`);
+                const EncodedOrg = encodeURIComponent(PROJECT_RECOGNITION);
+                const EncodedNote = encodeURIComponent(`Web Hosting Support - ${data.name.split(' ')[0]}`);
                 const upiUrl = `upi://pay?pa=${YOUR_GPAY_UPI_ID}&pn=${EncodedOrg}&tn=${EncodedNote}&cu=INR`;
                 
                 document.getElementById('modal-upi-link').href = upiUrl;
                 
-                // Reset copy button status text
                 document.getElementById('copy-action-button').innerText = "Copy ID";
                 document.getElementById('copy-action-button').style.background = "var(--gold)";
 
@@ -529,11 +537,11 @@
             const upiString = document.getElementById('visible-upi-string').innerText;
             navigator.clipboard.writeText(upiString).then(() => {
                 const btn = document.getElementById('copy-action-button');
-                btn.innerText = "Copied! ?";
+                btn.innerText = "Copied! ✓";
                 btn.style.background = "#4CAF50";
                 btn.style.color = "#fff";
             }).catch(err => {
-                alert("Failed to copy automatically. Please note down: " + upiString);
+                alert("Please copy manually: " + upiString);
             });
         }
 
@@ -544,4 +552,3 @@
     </script>
 </body>
 </html>
-
